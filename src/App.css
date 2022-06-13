@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+.hero {
+  visibility: hidden;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero_inner {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 24px;
+  height: 100vh;
+  flex-direction: row;
+}
+
+.hero_content {
+  width: 50%;
+  margin: 0 auto;
+  color: #323232;
+}
+
+.hero_content_inner h1 {
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.hero_content_line {
+  margin: 0;
+  height: 44px;
+  overflow: hidden;
+}
+
+.hero_content_inner p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  padding-right: 48px;
+  margin-bottom: 56px;
+}
+
+.btn_row button .arrow_icon {
+  position: absolute;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #007fff;
+  height: 42px;
+  width: 42px;
+  border-radius: 100px;
+  left: 80px;
 }
 
-.App-link {
-  color: #61dafb;
+.btn_row button {
+  background: none;
+  border: none;
+  font-size: 12px;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn_row button:focus {
+  outline: none;
+}
+
+.btn_row {
+  position: relative;
+}
+
+.btn_row::before {
+  content: "";
+  width: 56px;
+  height: 1px;
+  top: 50%;
+  left: -60%;
+  background-color: #dfdfdf;
+  position: absolute;
+}
+
+.hero_images {
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero_images img {
+  width: 440px;
+  height: 440px;
+  object-fit: contain;
+}
+
+.hero_images_girl{
+ transform: translate(320px, 80px);
+}
+
+.hero_images_boy {
+  transform: translate(0, -200px);
+
 }
